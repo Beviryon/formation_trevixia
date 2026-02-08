@@ -1,0 +1,103 @@
+/* Style de la section service */
+
+/* Reset ss de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variable css pour une meilleur maintenabilité */
+:root {
+    --primary-color: #2563eb;
+    --secondary-color: #1e40af;
+    --text-dark: #1f2937;
+    --bg-light: #f9fafb;
+    --text-light: #6b7280;
+    --white: #ffff;
+
+    /* variable pour la navigation */
+    --header-height: 4rem;
+    --nav-padding: 1.5rem;
+    --transition: all 0.3s ease;
+}
+
+.about {
+    padding: 5rem 0;
+    background-color: var(--bg-light);
+}
+
+.about__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.about__text {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.section-header--left {
+    text-align: left;
+    margin: 0;
+    max-width: 100%;
+}
+
+.about__description {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.about_description p {
+    font-size: 1.125rem;
+    color: var(--text-light);
+    line-height: 1.8;
+}
+
+.about__values {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.value-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.value-item__icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 0.5rem;
+}
+
+.value-item__icon svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.vaulue-item__title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.value-item__description {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+/* .about__visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+

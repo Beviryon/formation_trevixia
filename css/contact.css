@@ -1,0 +1,161 @@
+/* Variable css pour une meilleur maintenabilité */
+:root {
+    --primary-color: #2563eb;
+    --secondary-color: #1e40af;
+    --text-dark: #1f2937;
+    --bg-light: #f9fafb;
+    --text-light: #6b7280;
+    --white: #ffff;
+
+    /* variable pour la navigation */
+    --header-height: 4rem;
+    --nav-padding: 1.5rem;
+    --transition: all 0.3s ease;
+}
+
+/* body {
+    background-color: black;
+} */
+
+
+/* On change la couleur de la section contact */
+.contact {
+    padding: 4rem 0;
+    background-color: var(--bg-light);
+    width: 100%;
+}
+
+
+.contact .container {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+
+/* Le conteneur de gauche : les informations de contact */
+.section_left{
+    width: 45%;
+}
+
+
+.section_left .section-header {
+    margin-bottom: 1.5rem;
+}
+
+
+.section_left .section-header h2 {
+    margin-bottom: 0;
+}
+
+/* On aligne les informations de contact sur forme de grille */
+.section_left .contact__info-list{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+/* On retire leurs puces */
+.section_left .contact__info-list .contact__info-item {
+    list-style: none;
+    margin-bottom: 1rem;
+}
+
+/* Le conteneur de droite : celui du formulaire */
+.section_right {
+    width: 50%;
+}
+
+/* On designe la balise du formulaire */
+.contact__form {
+    width: 100%;
+    max-width: 580px; 
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.02);;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    border: 1px solid rgba(0,0,0,0.05); 
+    flex: 11 450px;
+}
+
+/* Nous sélectionnons les champs de nom et email */
+#name_and_email {
+    display: flex;
+    gap: 20px;
+}
+
+/* On aligne verticalement les label et champ du formulaire */
+.contact__form_container{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+/* L'astérix qui précise que ce champ est requis */
+.contact__form_container .required {
+    color: red;
+    margin-left: 2px;
+}
+
+.contact__form_container input, textarea {
+    padding: 8px 15px;
+    border-radius: 0.25rem; 
+    border: 1px solid #e5e7eb;
+    font-size: 1rem;
+}
+
+/* Tant que les champs du formulaire ne seront pas valide, ils auront une bordure rouge */
+.contact__form_container input:invalid, .contact__form_container textarea:invalid{
+    border-color: rgba(255, 0, 0, 0.417);
+}
+
+/* Une fois que les champs du formulaire seront valide, ils auront la couleur bleue associé bordure bleu foncé */
+.contact__form_container input:valid, .contact__form_container textarea:valid{
+    border-color: rgba(37, 99, 235, 0.2);
+    background: #e8f0fe;
+}
+
+/* Lorsque l'on clique sur un champ du formulaire, une bordure bleue foncé apparait sur lui */
+.contact__form_container input:focus, .contact__form_container textarea:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 12px 40px rgba(37, 99, 235, 0.2);
+    outline: none;
+}
+
+
+/* barre de progression*/
+.progresse{
+    width: 100%;
+    height: 10px;
+    background-color: #e5e7eb; 
+    border-radius: 10px;
+    margin: 10px 0 3rem 0;
+    margin-bottom: 2.5rem;
+    overflow: hidden;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.progresse-bar {
+    height: 100%;
+    width: 0%; 
+    background-color: var(--primary-color);
+   transition: width 0.4s ease; 
+}
+
+
+/* --- RESPONSIVE MOBILE --- */
+@media screen and (max-width: 768px){
+    .section_left, .section_right {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #name_and_email {
+        flex-direction: column;
+    }
+    
+    .contact__form {
+        flex-direction: column;
+    }
+}
