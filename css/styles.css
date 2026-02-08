@@ -18,6 +18,13 @@
     --header-height: 4rem;
     --nav-padding: 1.5rem;
     --transition: all 0.3s ease;
+
+    /* Variable responsive */
+    --breakpoint-desktop: 1200px;
+    --breakpoint-tablet: 968px;
+    --breakpoint-mobile: 768px;
+    --breakpoint-small: 600px;
+    --breakpoint-xs: 480px;
 }
 
 body {
@@ -211,6 +218,7 @@ body {
     .nav__toggle.active .hamburger:nth-child(3) {
         transform: rotate(-45deg) translate(7px, -7px);
     }
+    
 }
 
 /* SECTIO HERO */
@@ -354,5 +362,56 @@ body {
     width: 100%;
     height: auto;
     display: block;
+}
+
+/* responsiv section hero */
+@media screen and (max-width: 968px) {
+    .hero__title {
+        font-size: 2.5rem;
+    }
+
+    .hero__description {
+        font-size: 1.1rem;
+    }
+
+    .hero__container {
+        gap: 3rem;
+    }
+
+    .hero__stats {
+        gap: 2rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hero {
+        padding: 2rem 0;
+        min-height: unset;
+    }
+
+    .hero__container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .hero__title {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .hero__description {
+        font-size: 1rem;
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .hero__buttons {
+        justify-content: center;
+    }
+
+    .hero__stats {
+        justify-content: space-around;
+        gap: 1rem;
+    }
 }
 
